@@ -67,7 +67,7 @@ public class DemoController {
 
     //未授权跳转的页面
     @RequestMapping(value="4030")
-    public String noPermissions() {
-        return "403.html";
+    public @ResponseBody String noPermissions() {
+        return "66";
     }
 }
