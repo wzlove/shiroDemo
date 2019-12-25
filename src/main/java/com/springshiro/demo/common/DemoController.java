@@ -1,5 +1,6 @@
 package com.springshiro.demo.common;
 
+import com.springshiro.demo.aop.NoRepeatSubmit;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.session.Session;
@@ -59,6 +60,7 @@ public class DemoController {
         return resultMap;
     }
 
+    @NoRepeatSubmit
     @RequestMapping(value="index")
     @ResponseBody
     public String index() {
